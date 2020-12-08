@@ -16,6 +16,7 @@ export const homeInicialState: HomeState = {
 
 const reducer = createReducer(
     homeInicialState,
+    on(fromHomeActions.clearHomeState, () => homeInicialState),
     on(fromHomeActions.loadCurrentWeather, state => ({
         ...state,
         loading: true,

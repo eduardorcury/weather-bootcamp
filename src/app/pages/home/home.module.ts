@@ -10,13 +10,19 @@ import { ComponentsModule } from 'src/app/shared/components/components.module';
 import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
 import { DetailedWeatherComponent } from 'src/app/shared/components/detailed-weather/detailed-weather.component';
 import { UnitSelectorComponent } from './container/unit-selector/unit-selector.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
-  declarations: [HomePage, CurrentWeatherComponent, UnitSelectorComponent],
+  declarations: [
+    HomePage, 
+    CurrentWeatherComponent, 
+    UnitSelectorComponent
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    RouterModule,
     StoreModule.forFeature('home', homeReducer),
     EffectsModule.forFeature([HomeEffects]),
     ComponentsModule

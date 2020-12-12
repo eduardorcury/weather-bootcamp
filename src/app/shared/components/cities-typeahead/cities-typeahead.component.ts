@@ -15,7 +15,8 @@ export class CitiesTypeaheadComponent implements OnInit, ControlValueAccessor {
 
   dataSource$: Observable<CityTypeaheadItem[]>;
   search: string;
-
+  
+  loading: boolean;
   disabled: boolean;
   private onChange: (value: CityTypeaheadItem) => void;
   private onTouched: () => void;
@@ -34,7 +35,7 @@ export class CitiesTypeaheadComponent implements OnInit, ControlValueAccessor {
       );
   }
 
-  onSelect(match: TypeaheadMatch) {
+  onSelected(match: TypeaheadMatch) {
     this.onTouched();
     this.onChange(match.item);
   }

@@ -31,5 +31,4 @@ export class UnitSelectorComponent implements OnInit {
   updateUnit(unit: Units) {
     this.store.dispatch(fromConfigActions.updateUnit({ unit }));
   }
-
 }

@@ -14,15 +14,15 @@ export const loadCurrentWeatherById = createAction(
 export const loadCurrentWeatherSuccess = createAction(
     '[Weather API] Load Current Weather Success',
     props<{ entity: any }>(),
-)
+);
 
 export const loadCurrentWeatherFail = createAction(
     '[Weather API] Load Current Weather Fail',
-)
+);
 
 export const toggleBookmark = createAction(
     '[Home] Toggle Bookmark',
     props<{ entity: Bookmark }>(),
-)
+);
 
 export const clearHomeState = createAction('[Home] Clear Home State');

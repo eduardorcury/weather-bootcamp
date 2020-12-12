@@ -6,5 +6,8 @@
 
 - [Angular 9](https://github.com/angular/angular);
 - [NGRX](https://ngrx.io/);
+- [Bootstrap](https://getbootstrap.com/);
 
 ## :computer: &nbsp; Resultado
+
+<img src="https://github.com/eduardorcury/weather-bootcamp/blob/main/screenshot.png">

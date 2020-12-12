@@ -9,10 +9,11 @@ import { HomeEffects } from './state/home.effects';
 import { ComponentsModule } from 'src/app/shared/components/components.module';
 import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
 import { DetailedWeatherComponent } from 'src/app/shared/components/detailed-weather/detailed-weather.component';
+import { UnitSelectorComponent } from './container/unit-selector/unit-selector.component';
 
 
 @NgModule({
-  declarations: [HomePage, CurrentWeatherComponent],
+  declarations: [HomePage, CurrentWeatherComponent, UnitSelectorComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,

@@ -4,7 +4,11 @@ import { DetailsPage } from './containers/details/details.page';
 import { RouterModule } from '@angular/router';
 import { DetailsGuard } from './services/details.guard';
 import { DailyWeatherComponent } from './components/daily-weather/daily-weather.component';
-
+import { StoreModule } from '@ngrx/store';
+import { detailsReducer } from './state/details.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { DetailsEffects } from './state/details.effects';
+import { ComponentsModule } from 'src/app/shared/components/components.module';
 
 
 @NgModule({
@@ -17,6 +21,9 @@ import { DailyWeatherComponent } from './components/daily-weather/daily-weather.
     RouterModule.forChild([
       { path: '', component: DetailsPage, canActivate: [DetailsGuard] },
     ]),
+    StoreModule.forFeature('details', detailsReducer),
+    EffectsModule.forFeature([DetailsEffects]),
+    ComponentsModule,
   ],
   providers: [
     DetailsGuard,

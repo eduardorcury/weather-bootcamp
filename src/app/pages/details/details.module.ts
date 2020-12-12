@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { DetailsPage } from './containers/details/details.page';
 import { RouterModule } from '@angular/router';
 import { DetailsGuard } from './services/details.guard';
+import { DailyWeatherComponent } from './components/daily-weather/daily-weather.component';
 
 
 
 @NgModule({
   declarations: [
-    DetailsPage
+    DetailsPage,
+    DailyWeatherComponent
   ],
   imports: [
     CommonModule,

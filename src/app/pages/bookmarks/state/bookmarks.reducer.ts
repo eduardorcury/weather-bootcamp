@@ -22,6 +22,10 @@ export interface BookmarksState {
       ...state,
       list: state.list.filter(b => b.id !== id),
     })),
+    on(fromBookmarksAction.updateBookmarksList, (state, { list }) => ({
+      ...state,
+      list,
+    })),
   );
   
   export function bookmarkReducer(state: BookmarksState | undefined, action: Action) {
